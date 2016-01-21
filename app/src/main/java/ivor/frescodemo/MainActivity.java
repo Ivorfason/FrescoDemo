@@ -22,6 +22,7 @@ public class MainActivity extends Activity {
     private String mIcon = "http://g.hiphotos.baidu.com/image/pic/item/eac4b74543a9822681e4b42e8d82b9014a90eb96.jpg";
     private String mGif  = "http://img.sc115.com/uploads/shows/140830/20140830549.jpg";
 
+    private Uri uri;
     private PicHolding picHolding;
 
     @Override
@@ -43,10 +44,10 @@ public class MainActivity extends Activity {
         this.mPic8SDV = (SimpleDraweeView) findViewById(R.id.ivor_pic8_sdv);
         this.mPic9SDV = (SimpleDraweeView) findViewById(R.id.ivor_pic9_sdv);
 
+        this.uri = Uri.parse(mIcon);
         this.picHolding = new PicHolding();
 
         // 普通图片处理
-        Uri uri = Uri.parse(mIcon);
         this.mPic1SDV.setImageURI(uri);
         this.mPic2SDV.setImageURI(uri);
         this.mPic3SDV.setImageURI(uri);
